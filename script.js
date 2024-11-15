@@ -39,9 +39,13 @@ function getLatinCharacterList(string){
 //test de la fonction avec une variable
 let HW = "Hello World"
 console.log(getLatinCharacterList(HW))
+//test de la fonction avec une chaîne de caractères
+console.log(getLatinCharacterList("Hello World"))
+
 
 function translateLatinCharacter(char){
-    //nécessite des tests
+    morseChar = latinToMorse[char]
+    return morseChar
 }
 
 //test du dictionnaire pour comprendre comment fonctionne ce genre de variables
@@ -49,3 +53,5 @@ function translateLatinCharacter(char){
 console.log(latinToMorse[A]) //pas une variable
 console.log(latinToMorse["A"]) //fonctionne avec la lettre en chaîne de caractères */
 
+//test de la fonction 
+console.log(translateLatinCharacter("A"))
