@@ -70,4 +70,22 @@ function encode(string){
 }
 
 //test fonction encode
-console.log(encode("test"))
+//console.log(encode("test"))
+
+
+let userDiv = document.querySelector("#userText") //on récupère le texte écrit par l'utilisateur
+let translatedDiv = document.querySelector('#translatedText')
+let validBtn = document.querySelector('#validBtn')
+
+
+//On ajoute une fonction pour activer notre traduction 
+function validation(){
+    let userText = userDiv.value
+    let translatedText = encode(userText)
+    translatedDiv.innerHTML = ""
+    translatedDiv.innerHTML = `Votre texte : <br/> ${userText} <br/> en morse : <br/> ${translatedText}`
+    console.log(userText)
+}
+
+//on active cette fonction de validation quand on clique sur le bouton
+validBtn.addEventListener('click', validation)

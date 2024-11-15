@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+#main-container{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    background-color: pink;
+    max-width: fit-content;
+    padding:1rem;
+
+    font-family: "Gill Sans";
+    font-size: large;
+}
+
+#translatedText{
+    display:flex;
+    background-color: lightblue;
+    max-width: fit-content;
+    padding:1rem;
+    position: absolute;
+    bottom: 25vh;
+    text-align: center;
+}
+
+#validBtn{
+    font-size: large;
+}
+
+#userText{
+    margin:1vh
+}
