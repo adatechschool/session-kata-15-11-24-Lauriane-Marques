@@ -58,15 +58,16 @@ console.log(latinToMorse["A"]) //fonctionne avec la lettre en chaîne de caract�
 //console.log(translateLatinCharacter(HW)) //ne fonctionne pas avec une variable
 
 function encode(string){
-    let upperString = string.toUpperCase()
-    let charArray = getLatinCharacterList(upperString)
-    console.log("charArray " + charArray)
+    let upperString = string.toUpperCase() //on passe la chaîne de caractères en majuscules
+    let charArray = getLatinCharacterList(upperString) //on utilise la première fonction pour faire epeller la chaîne de caractères
+    let morseArray = "" //on définit une chaîne de caractères vide
+    //console.log("charArray " + charArray)
+
     for(const char of charArray){
-        let morseArray = translateLatinCharacter(char)
-        console.log(morseArray)
+        morseArray += translateLatinCharacter(char) + " " //pour chaque caractères on le traduit en morse puis on l'ajoute à notre chaîne avec un espace entre chaques lettres
     }
+    return morseArray
 }
 
 //test fonction encode
 console.log(encode("test"))
-//elle fonctionne mais renvoie tout en colonne 
