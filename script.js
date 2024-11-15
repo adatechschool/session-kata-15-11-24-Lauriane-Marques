@@ -38,9 +38,9 @@ function getLatinCharacterList(string){
 
 //test de la fonction avec une variable
 let HW = "Hello World"
-console.log(getLatinCharacterList(HW))
+//console.log(getLatinCharacterList(HW))
 //test de la fonction avec une chaîne de caractères
-console.log(getLatinCharacterList("Hello World"))
+//console.log(getLatinCharacterList("Hello World"))
 
 
 function translateLatinCharacter(char){
@@ -54,4 +54,19 @@ console.log(latinToMorse[A]) //pas une variable
 console.log(latinToMorse["A"]) //fonctionne avec la lettre en chaîne de caractères */
 
 //test de la fonction 
-console.log(translateLatinCharacter("A"))
+//console.log(translateLatinCharacter("A")) //fonctionne avec une chaine de caractères
+//console.log(translateLatinCharacter(HW)) //ne fonctionne pas avec une variable
+
+function encode(string){
+    let upperString = string.toUpperCase()
+    let charArray = getLatinCharacterList(upperString)
+    console.log("charArray " + charArray)
+    for(const char of charArray){
+        let morseArray = translateLatinCharacter(char)
+        console.log(morseArray)
+    }
+}
+
+//test fonction encode
+console.log(encode("test"))
+//elle fonctionne mais renvoie tout en colonne 
