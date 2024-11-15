@@ -1,3 +1,33 @@
+//j'ai essayé de faire un type=module avec un import/export mais je n'ai pas réussi à le faire fonctionner
+const latinToMorse = {
+	'A':'.-',
+	'B':'-...',
+	'C':'-.-.',
+	'D':'-..',
+	'E':'.',
+	'F':'..-.',
+	'G':'--.',
+	'H':'....',
+	'I':'..',
+	'J':'.---',
+	'K':'-.-',
+	'L':'.-..',
+	'M':'--',
+	'N':'-.',
+	'O':'---',
+	'P':'.--.',
+	'Q':'--.-',
+	'R':'.-.',
+	'S':'...',
+	'T':'-',
+	'U':'..-',
+	'V':'...-',
+	'W':'.--',
+	'X':'-..-',
+	'Y':'-.--',
+	'Z':'--..'
+}
+
 function getLatinCharacterList(string){
     let array= [] //création d'un tableau vide
     for(const char of string){ //pour chaque caractère de la chaîne de caractères
@@ -9,3 +39,13 @@ function getLatinCharacterList(string){
 //test de la fonction avec une variable
 let HW = "Hello World"
 console.log(getLatinCharacterList(HW))
+
+function translateLatinCharacter(char){
+    //nécessite des tests
+}
+
+//test du dictionnaire pour comprendre comment fonctionne ce genre de variables
+/*console.log(latinToMorse[0]) //ne fonctionne pas
+console.log(latinToMorse[A]) //pas une variable
+console.log(latinToMorse["A"]) //fonctionne avec la lettre en chaîne de caractères */
+
